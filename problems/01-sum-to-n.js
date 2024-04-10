@@ -13,8 +13,21 @@ sumToN(-8)  // returns null
 
 
 function sumToN(n) {
-  // Your code here 
+  debugger
+  
+  if (n < 0) {
+    return null;
+
+  }
+  let sum = n;
+  if (n === 0){
+    return sum;
+  }
+  
+  n--;
+  return sum + sumToN(n);
 }
+console.log(sumToN(5)) // returns 15
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
