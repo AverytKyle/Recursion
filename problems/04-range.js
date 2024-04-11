@@ -12,8 +12,25 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  debugger
+  if (end < start) {
+    return []
+  }
+  
+  let arr = []
+
+  if (end === start) {
+    return arr
+  }
+  
+  arr.unshift(start)
+  start++
+
+  return arr.concat(range(start, end))
+
 }
+
+console.log(range(1, 5))
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
